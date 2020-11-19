@@ -17,6 +17,13 @@ class Database {
         $data = $stmt->fetchAll();
         return $data;
     }
+
+    public static function add($sql, $params = array()){
+        
+        $stmt = self::connect()->prepare($sql);
+        $stmt->execute($params);
+        return true;
+    }
 }
 
 ?>

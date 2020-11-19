@@ -1,6 +1,8 @@
-
-
-<form name="cadastro" action="http://localhost:8080/contact/adicionaAluno" method="POST">
+<?php $aluno = $data['aluno'];?>
+<?php 
+    $this->view('home/cabecario');
+?>
+<form name="cadastro" action="http://localhost:8080/contact/alteraAluno" method="POST">
   <div class="form-group row">
     <label class="col-4 col-form-label" for="nome">Nome</label> 
     <div class="col-8">
@@ -10,7 +12,8 @@
             <i class="fa fa-address-card"></i>
           </div>
         </div> 
-        <input id="nome" name="nome" placeholder="informe seu nome" type="text" class="form-control" aria-describedby="nomeHelpBlock" required="required">
+        <input id="id" name="id" type="hidden" value="<?=$aluno->idalunos;?>">
+        <input id="nome" name="nome" value="<?=$aluno->nome;?>" placeholder="informe seu nome" type="text" class="form-control" aria-describedby="nomeHelpBlock" required="required">
       </div> 
       <span id="nomeHelpBlock" class="form-text text-muted">Informe seu nome completo</span>
     </div>
@@ -24,7 +27,7 @@
             <i class="fa fa-bullseye"></i>
           </div>
         </div> 
-        <input id="idade" name="idade" placeholder="informe sua idade" type="text" required="required" class="form-control">
+        <input id="idade" name="idade" value="<?=$aluno->idade;?>" placeholder="informe sua idade" type="text" required="required" class="form-control">
       </div>
     </div>
   </div>
@@ -47,3 +50,7 @@
     </div>
   </div>
 </form>
+
+<?php 
+    $this->view('home/rodape');
+?>
