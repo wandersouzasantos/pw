@@ -3,7 +3,7 @@
     
     </head>
     <body>
-        <h1>Lista de alunos</h1>
+        <h1>Lista de alunos por nome</h1>
         <ul>
         <?php
           
