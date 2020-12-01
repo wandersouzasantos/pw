@@ -23,7 +23,7 @@ class Contact extends Controller {
         $aluno = $this->model('Alunos');
         $valor = $aluno->getAlunoForId($id);
         return $valor;
-    }
+    } 
     public function adicionaAluno(){
         $nome = $_POST["nome"];
         $idade = $_POST["idade"];
@@ -54,5 +54,3 @@ class Contact extends Controller {
         
     }
 }
-
-?>
